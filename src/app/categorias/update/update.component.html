@@ -1,0 +1,13 @@
+<h2>Atualizar Categoria</h2>
+
+<div *ngIf="request">
+    <label>Nome:
+        <input placeholder="Digite o nome" [(ngModel)]="request.name">
+    </label>
+    <br><br>
+    <label>Tipo:
+        <input placeholder="Digite tipo de Categoria" [(ngModel)]="request.tipo">
+    </label>
+    <br><br>
+    <button (click)="update()">Atualizar</button>
+</div>

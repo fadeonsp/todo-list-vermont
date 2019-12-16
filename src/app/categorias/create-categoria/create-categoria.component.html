@@ -1,0 +1,23 @@
+<h2>Criar Categoria</h2>
+
+<div>
+    <label>Nome:
+        <input placeholder="Digite o nome" [(ngModel)]="request.name">
+    </label>
+    <br><br>
+    <label>Tipo:
+        <input placeholder="Digite tipo de Categoria" [(ngModel)]="request.tipo">
+    </label>
+    <br><br>
+    <button (click)="salvar()">Gravar</button>
+</div>
+
+ <br><br>
+
+ <div *ngIf="response">
+     <h3> Criado com sucesso!!!</h3>
+     <label>Nome {{response.name}}</label><br>
+     <label>Tipo {{response.tipo}}</label><br>
+     <label>Id {{response.id}}</label><br>
+     <label>Criado em: {{response.createdAt}}</label><br>
+ </div>

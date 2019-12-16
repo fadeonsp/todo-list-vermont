@@ -1,0 +1,18 @@
+<h1>Categorias</h1>
+
+<table *ngIf="responseCategorias">
+    <thead>
+        <td>Nome1</td>
+        <td>Nome2</td>
+        <td>...</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let categoria of responseCategoria.data">
+            <td>{{categoria.name}}</td>
+            <td>{{categoria.tipo}}</td>
+            <td><a routerLink="/categorias/update/{{categoria.id}}">Editar</a>
+            <td><a routerLink="/categorias/delete/{{categoria.id}}">Remover</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
